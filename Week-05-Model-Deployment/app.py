@@ -1,11 +1,12 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "final_churn_pipeline.joblib")
 
-# Load saved pipeline
-pipeline = joblib.load("final_churn_pipeline.joblib")
-
+pipeline = joblib.load(MODEL_PATH)
 
 # Page configuration
 st.set_page_config(
