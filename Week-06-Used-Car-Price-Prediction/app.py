@@ -16,7 +16,11 @@ st.set_page_config(
 # Load Trained Model
 # ==========================================
 
-MODEL_PATH = "used_car_price_model.joblib"
+from pathlib import Path
+
+
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR / "used_car_price_model.joblib"
 
 try:
     model = joblib.load(MODEL_PATH)
