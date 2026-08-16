@@ -99,8 +99,7 @@ vehicle details and receive an estimated resale price.
 
 ### Live Demo
 
-**Live URL:** Add the Streamlit Cloud URL here after deployment.
-
+**Live URL:** https://used-car-price-neurofive.streamlit.app/
 ## Run Locally
 
 Clone the repository:
