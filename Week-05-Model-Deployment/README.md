@@ -2,37 +2,40 @@
 
 ## Customer Churn Prediction Web App
 
-This project converts a trained machine learning model into a simple
-interactive web application using Streamlit.
+This project deploys a trained Machine Learning model as an interactive
+web application using Streamlit.
 
-The trained customer churn prediction pipeline was saved using Joblib
-and integrated into a Streamlit application.
+The customer churn prediction pipeline was trained using Scikit-learn
+and saved with Joblib. The saved pipeline is loaded by the Streamlit
+application to make predictions on new customer information.
 
-## Project Objective
+## Objective
 
-The objective of this task is to deploy a machine learning model so that
-users can provide customer information and receive a churn prediction
-through a web interface.
+The objective of this task is to convert a trained Machine Learning model
+into a simple, shareable, and usable web application.
+
+Users can enter customer information through the web interface and
+receive a prediction showing whether the customer is likely to churn.
 
 ## Technologies Used
 
 - Python
-- Scikit-learn
 - Pandas
 - NumPy
+- Scikit-learn
 - Joblib
 - Streamlit
 
 ## Machine Learning Model
 
 The application uses the final Logistic Regression pipeline developed
-during the Week 04 ML Pipeline task.
+during the Week 04 Machine Learning Pipeline task.
 
-The complete pipeline includes:
+The pipeline includes:
 
 - Numerical feature preprocessing
 - StandardScaler
-- Categorical feature encoding
+- Categorical feature preprocessing
 - OneHotEncoder
 - Logistic Regression
 
@@ -40,12 +43,14 @@ The complete trained pipeline was saved as:
 
 `final_churn_pipeline.joblib`
 
-This allows the application to perform the same preprocessing and
-prediction steps on new customer data.
+Saving the complete pipeline ensures that the same preprocessing steps
+used during training are automatically applied when making predictions
+in the web application.
 
 ## Streamlit Application
 
-The application provides input fields for customer information such as:
+The Streamlit application provides input fields for customer information,
+including:
 
 - Gender
 - Senior Citizen
@@ -54,11 +59,12 @@ The application provides input fields for customer information such as:
 - Tenure
 - Phone Service
 - Internet Service
+- Streaming Services
 - Contract
+- Paperless Billing
 - Payment Method
 - Monthly Charges
 - Total Charges
-- Other customer service information
 
 After entering the customer information, the user can click the
 **Predict Churn** button.
@@ -67,9 +73,14 @@ The application then displays whether the customer is likely to churn.
 
 ## Live Application
 
-[Open the Live Customer Churn Prediction App](https://customer-churn-prediction-neurofive.streamlit.app/)
+🚀 **Try the deployed application:**
 
-## Project Files
+https://customer-churn-prediction-neurofive.streamlit.app/
+
+The application is deployed using **Streamlit Community Cloud** and is
+available online for testing.
+
+## Project Structure
 
 ```text
 Week-05-Model-Deployment/
